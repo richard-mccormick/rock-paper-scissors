@@ -25,17 +25,24 @@ function getHumanChoice() {
         return;
     }
 
-    let humanScore = 0;
-    let computerScore = 0;
+    
+}
 
+let humanScore = 0;
+let computerScore = 0;
 
-   function playRound(){
-       getComputerChoice();
-       getHumanChoice();
+function playRound() {
+    let compSelection = getComputerChoice();
+    let humanSelection = getHumanChoice();
 
-       if ((compChoice === 'rock' && humanChoice === 'paper') || (compChoice === 'paper' && humanChoice === 'scissors') || (compChoice === 'scissors' && humanChoice ===  'rock')) {
-
-       }
+    if ((compSelection === 'rock' && humanSelection === 'paper') || (compSelection === 'paper' && humanSelection === 'scissors') || (compSelection === 'scissors' && humanSelection ===  'rock')) {
+        humanScore++;
+        return console.log('You win! ' + (humanSelection.charAt(0).toUpperCase()+humanSelection.slice(1)) + ' beats ' +compSelection + '!')
+    }else if (compSelection === humanSelection) {
+        return console.log("It's a tie!");
+    }else {
+        computerScore++;
+        return console.log('You lose! ' + (compSelection.charAt(0).toUpperCase()+compSelection.slice(1)) + ' beats ' + humanSelection + '!');
+    }
 
     }
-}
