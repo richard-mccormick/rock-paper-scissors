@@ -6,14 +6,11 @@ function getComputerChoice(){
     let compChoice = Math.random();
 
     if (compChoice < 1/3) {
-        compChoice = 'rock';
-        return compChoice;
+        return 'rock';
     } else if (compChoice > 2/3 ) {
-        compChoice = 'paper';
-        return compChoice;
+        return 'paper';
     } else {
-        compChoice = 'scissors'
-        return compChoice;
+        return 'scissors';
     }
 }
 
@@ -32,9 +29,13 @@ function getHumanChoice() {
     let computerScore = 0;
 
 
-   /* function playRound(){
-   //     getComputerChoice();
-  //     getHumanChoice();
+   function playRound(){
+       getComputerChoice();
+       getHumanChoice();
+
+       if ((compChoice === 'rock' && humanChoice === 'paper') || (compChoice === 'paper' && humanChoice === 'scissors') || (compChoice === 'scissors' && humanChoice ===  'rock')) {
+
+       }
 
     }
 }
