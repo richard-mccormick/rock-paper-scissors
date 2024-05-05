@@ -21,8 +21,7 @@ function getHumanChoice() {
         return humanChoice;
     } else {
         alert("This is not a valid answer. Try again!");
-        getHumanChoice();
-        return;
+        return humanChoice = getHumanChoice();
     }
 
     
@@ -46,3 +45,18 @@ function playRound() {
     }
 
     }
+
+function playGame() {
+    if (humanScore >= 3) {
+        console.log ('You win! Final score: Player - ' + humanScore + ' Computer - ' + computerScore);
+        return humanScore = computerScore = 0;
+    } else if (computerScore >= 3) {
+        console.log ('You lose! Final score: Player - ' + humanScore + ' Computer - ' + computerScore);
+        return humanScore = computerScore = 0;
+    } else {
+        playRound();
+        console.log ('Player - ' + humanScore + ' Computer: ' + computerScore);
+        playGame ();
+        return;
+    }
+}
