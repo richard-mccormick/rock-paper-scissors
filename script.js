@@ -13,3 +13,13 @@ function getComputerChoice(){
         return 'scissors';
     }
 }
+
+function getHumanChoice() {
+    let humanChoice = window.prompt("Pick one! (Rock, Paper, or Scissors)", "").toLowerCase();
+    
+    if (humanChoice ===  'rock' || humanChoice === 'paper' || humanChoice === 'scissors') {
+        return humanChoice;
+    } else {
+        return 'THIS IS NOT A VALID ANSWER!';
+    }
+}
