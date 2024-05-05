@@ -6,11 +6,14 @@ function getComputerChoice(){
     let compChoice = Math.random();
 
     if (compChoice < 1/3) {
-        return 'rock';
+        compChoice = 'rock';
+        return compChoice;
     } else if (compChoice > 2/3 ) {
-        return 'paper';
+        compChoice = 'paper';
+        return compChoice;
     } else {
-        return 'scissors';
+        compChoice = 'scissors'
+        return compChoice;
     }
 }
 
@@ -20,6 +23,18 @@ function getHumanChoice() {
     if (humanChoice ===  'rock' || humanChoice === 'paper' || humanChoice === 'scissors') {
         return humanChoice;
     } else {
-        return 'THIS IS NOT A VALID ANSWER!';
+        alert("This is not a valid answer. Try again!");
+        getHumanChoice();
+        return;
+    }
+
+    let humanScore = 0;
+    let computerScore = 0;
+
+
+   /* function playRound(){
+   //     getComputerChoice();
+  //     getHumanChoice();
+
     }
 }
