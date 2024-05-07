@@ -3,11 +3,24 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
     <title>Document</title>
 </head>
 <body>
-    <div class = container >
-        <button class = selection-buttton></button>
+    <div class="container" >
+
+        <div class="result-text">Rock beats paper. Computer wins!</div>
+        <div class="buttons">
+            <button id="rock" class="selection-button">Rock</button>
+            <button id="paper" class="selection-button">Paper</button>
+            <button id= "scissors" class="selection-button">Scissors</button>
+        </div>
+        <div class="score">
+            <div>Human score: 1 </div>
+            <button class="reset-button">Reset Score</button>
+            <div>Computer Score: 1 </div>
+        </div>
+        
     </div>
 
     <script src="script.js"></script>
